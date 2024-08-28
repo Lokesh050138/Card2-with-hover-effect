@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 1000px;
+            /* Adds perspective to the entire scene */
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 240px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.6s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            /* Enables 3D transform */
+            position: relative;
+        }
+
+        .card:hover {
+            transform: rotateY(10deg) scale(1.05);
+            /* Adds a 3D rotation and scale on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header-img img {
+            width: 100%;
+            border-radius: 0.5rem;
+            transition: transform 0.6s ease;
+            /* Smooth transition for the image */
+        }
+
+        .card:hover .card-header-img img {
+            transform: translateY(-50px);
+            /* Slightly raises the button on hover */
+
+        }
+
+        .card-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            transition: color 0.3s ease;
+            /* Smooth transition for text color */
+        }
+
+        .card-body {
+            margin: 20px 0;
+            color: #666;
+            transform: translateY(20px);
+            /* Slightly moves the content down */
+            transition: transform 0.4s ease;
+            /* Smooth fade and slide-in effect */
+        }
+
+        .card-footer {
+            font-size: 16px;
+            color: #555;
+            transition: color 0.3s ease;
+            /* Smooth transition for text color */
+        }
+
+        .card-footer p {
+            margin: 0;
+        }
+
+        /* Hover effects to reveal card content smoothly */
+        .card:hover .card-body {
+            transform: translateY(0);
+            /* Moves the content up to its original position */
+        }
+
+        .card-body button {
+            background-color: #4f29cd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            /* Smooth transition for button */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body button:hover {
+            background-color: #b95ce4;
+            transform: translateY(-3px);
+            /* Slightly raises the button on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header-img">
+            <img src="../brabari.org projects/img/digital-art-with-urban-landscape-architecture.jpg"
+                alt="Urban Landscape">
+        </div>
+        <div class="card-header">
+            <h1>Happy Birthday!</h1>
+        </div>
+        <div class="card-body">
+            <p>Wishing you a fantastic day filled with love, laughter, and all your favorite things!</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>
